@@ -1,0 +1,17 @@
+<div class="container">
+<div class="ml-40">
+    <div class="text-lg shadow-md rounded-lg p-4">
+      <div class="flex justify-between items-center">
+        <h1>{{ movie?.title }}</h1>
+        <button class="px-4 py-2 mt-8 bg-blue-500 text-white rounded-md hover:bg-blue-600" (click)="details(movie?.id)">Details</button>
+      </div>
+      <div class="mt-4">
+        <p class="text-lg">
+          Duration: {{ movie?.duration | duration}}<br>
+          Budget: {{ movie?.budget }}<br>
+          Release Date: {{ movie?.release_date }}
+        </p>
+      </div>
+    </div>
+</div> 
+</div> 

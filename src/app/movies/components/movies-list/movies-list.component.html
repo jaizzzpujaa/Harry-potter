@@ -1,0 +1,49 @@
+<header class="bg-gradient-to-r from-blue-600 to-blue-900 h-16 flex justify-center items-center text-white text-lg shadow-lg">
+  <h2 class="font-bold text-2xl">Harry Potter Movies App</h2>
+</header>
+
+
+<div class="ml-40 flex justify-center text-lg">
+  <label class="font-bold mb-2 mt-4"> <h1> Filter :</h1></label>
+  
+  <div class="flex">
+  <div class="mr-4 mt-24 text-lg flex items-center ">
+    <label class="mb-2">
+      <b class="mb-10" ><h2>Title</h2></b></label>
+      <input type="text" class="h-10 w-96 rounded p-4 ml-4 mr-8" [(ngModel)]="titleFilter" (input)="filterMovies()"   placeholder="Search your movie">
+  
+  </div>
+  <div class="mr-4 mt-24 text-lg flex items-center ">
+    <label class="mb-2">
+      <b class="mb-10" ><h2>Release Year</h2></b></label>
+      <input type="text" class="h-10 w-96 rounded p-4 ml-4 mr-8" [(ngModel)]="releaseYearFilter" (input)="filterMovies()"   placeholder="Search your movie">
+  
+  </div>
+
+  </div>
+</div>
+  <div class=" row justify-content-center mt-3">
+    <ng-container *ngFor="let movie of filteredMovies">
+      <div class="col-lg-7 col-md-10 col-sm-12 col-12 mb-3">
+        <app-movie [movie]="movie"></app-movie>
+      </div>
+    </ng-container>
+    </div>
+  
+    <footer class="bg-gradient-to-r from-blue-600 to-blue-900 h-16 flex justify-center items-center text-white text-lg shadow-lg">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-center items-center">
+          <p class="text-lg">&copy; 2024 Your Movie App</p>
+          <nav>
+            <ul class="flex space-x-4 text-white text-lg">
+              <li>About</li>
+              <li>Contact</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    
+
+

@@ -1,0 +1,55 @@
+<div class="container" >
+  <div class="ml-80 mt-10">
+  <div class="col-1 flex items-center ">
+    <button class="flex items-center text-black hover:bg-blue-800 font-bold rounded " (click)="back()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-12 mr-1" style="color: green;">
+        <path d="M8.543 2.232a.75.75 0 0 0-1.085 0l-5.25 5.5A.75.75 0 0 0 2.75 9H4v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V9h1.25a.75.75 0 0 0 .543-1.268l-5.25-5.5Z" />
+      </svg>
+      <h2>Back</h2>
+    </button>  
+  </div>
+  <h1 class="mt-10" style="font-size: 2rem;"><b>{{ movie?.title }}</b></h1>
+
+<div class="container mt-10" style="display: flex;">
+  <div class="col-md-6 col-12" style="width: 40%;height:70%;">
+      <img class="img-fluid" [src]="movie?.poster" alt="{{ movie?.title }} Poster" style="max-width: 100%; height: auto;" />
+  </div>
+  <div class="col-md-6 col-15 d-flex align-items-center mt-10" style="width: 50%;">
+      <p><b>Summary:</b> {{ movie?.summary }}</p>
+  </div>
+</div>
+
+
+
+  
+    <h3 class="flex justify-center mt-10" style="font-size: 2rem;"><b>Details</b></h3>
+    <div class="mt-10 mb-10 text-lg flex justify-center">
+    <table class="table border" style="border: 1px solid rgb(93, 156, 168);">
+     <tbody>
+      <tr>
+        <th >Box Office</th>
+        <td style="padding-right: 200px; border-left: 1px solid #000;" >{{ movie?.box_office  }}</td>
+      </tr>
+      <tr>
+        <th >Budget</th>
+        <td style="padding-right: 200px; border-left: 1px solid #000;" >{{ movie?.budget  }}</td>
+      </tr>
+      <tr>
+        <th >Duration</th>
+        <td style="padding-right: 200px; border-left: 1px solid #000;" >{{ movie?.duration | duration  }}</td>
+      </tr>
+      <tr>
+        <th >Producers</th>
+        <td style="padding-right: 200px; border-left: 1px solid #000;" >{{  movie?.producers?.join(', ')   }}</td>
+      </tr>
+      <tr>
+        <th >Cinematographers</th>
+        <td style="padding-right: 200px; border-left: 1px solid #000;" > {{movie?.cinematographers?.join(', ') }}</td>
+      </tr>
+     </tbody>
+    </table>
+    </div>
+ </div> 
+</div>
+
+  
